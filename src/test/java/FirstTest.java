@@ -4,10 +4,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FirstTest {
 
-    private WebDriver driver;
-
     @Test
     public void firstTest() {
+        WebDriver driver;
         driver = new ChromeDriver();
         driver.navigate().to("https://www.google.com/");
         driver.quit();
