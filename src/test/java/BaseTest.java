@@ -17,14 +17,7 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-fullscreen");
         driver = new ChromeDriver(options);
-        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-        driver.get("http://localhost/litecart/admin/");
-        driver.findElement(By.name("username")).sendKeys("admin");
-        driver.findElement(By.name("password")).sendKeys("admin");
-        driver.findElement(By.name("login")).click();
     }
 
     @AfterClass
